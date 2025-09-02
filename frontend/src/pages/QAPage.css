@@ -1,0 +1,133 @@
+/* QAPage.css */
+
+.answer-container {
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.question-section,
+.answer-section {
+  margin-bottom: 2rem;
+}
+
+.question-section h3,
+.answer-section h3 {
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.help-tips {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.help-tips h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.help-tips ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.help-tips li {
+  margin-bottom: 0.5rem;
+  color: #495057;
+  line-height: 1.5;
+}
+
+/* Animation for answer appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .answer-container {
+    margin-top: 1.5rem;
+  }
+  
+  .question-section,
+  .answer-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .help-tips {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Loading state for sources */
+.source-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Error state */
+.error {
+  background-color: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+/* Source content */
+.source-content {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-left: 3px solid #4299e1;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Confidence badge */
+.confidence-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+}
+
+.confidence-badge.high {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.confidence-badge.medium {
+  background-color: #fffaf0;
+  color: #b7791f;
+}
+
+.confidence-badge.low {
+  background-color: #fff5f5;
+  color: #c53030;
+}
