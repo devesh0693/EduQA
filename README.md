@@ -349,7 +349,7 @@ educational-qa-system/
          │              ┌─────────────────┐              │
          │              │   Data Layer    │              │
          │              │                 │              │
-         └──────────────►│ - PostgreSQL   │◄─────────────┘
+         └──────────────►│ - SQLite   │◄─────────────┘
                         │ - Redis Cache  │
                         │ - Elasticsearch│
                         └─────────────────┘
@@ -358,13 +358,15 @@ educational-qa-system/
 ## 🛠️ Technology Stack
 
 ### Backend
-- **Django 4.2+**: Web framework with REST API
-- **Django REST Framework**: API development
-- **PostgreSQL**: Primary database with vector extensions
-- **Redis**: Caching and session management
-- **Elasticsearch**: Full-text search engine
-- **Celery**: Background task processing
-- **Gunicorn**: Production WSGI server
+- **Django 4.2.7** - Web framework
+- **Django REST Framework 3.14.0** - API development
+- **PyTorch 2.0+** - Deep learning framework
+- **Transformers 4.21+** - Hugging Face transformers
+- **Sentence Transformers 2.2+** - Semantic search
+- **BERT** - Question answering model
+- **Redis** - Caching layer
+- **SQLite** - Database
+- **NumPy & Pandas** - Data processing
 
 ### Frontend
 - **React 18**: Modern UI framework
@@ -514,25 +516,6 @@ When deployed in production mode, the system includes:
 - Database connectivity
 - Redis connectivity
 - Elasticsearch status
-
-## 🔒 Security
-
-### Security Features
-
-- **Rate Limiting**: Prevents abuse and DDoS attacks
-- **CORS Protection**: Controlled cross-origin requests
-- **Security Headers**: XSS protection, content type sniffing prevention
-- **Input Validation**: Comprehensive input sanitization
-- **Authentication**: Session and token-based auth
-- **HTTPS Ready**: SSL/TLS configuration for production
-
-### Best Practices
-
-- Use strong, unique passwords
-- Keep dependencies updated
-- Monitor logs regularly
-- Use environment variables for secrets
-- Enable HTTPS in production
 
 ## 🚀 Deployment
 
@@ -700,7 +683,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Common Issues:**
 
 1. **Backend won't start**
-   - Check if PostgreSQL is running
+   - Check if SQLite is running
    - Verify environment variables
    - Check logs: `docker-compose logs backend`
 
