@@ -134,9 +134,9 @@ flowchart TD
     
     I --> O
     
-    style A fill:#bbdefb
-    style O fill:#c8e6c9
-    style J fill:#ffe0b2
+    style A fill:#A143E8
+    style O fill:#F01F9B
+    style J fill:#1F7DF0
 ```
 
 ### 2. Model Training Pipeline
@@ -169,9 +169,9 @@ flowchart LR
         N --> O[API Endpoint]
     end
     
-    style A fill:#ffecb3
-    style I fill:#f8bbd9
-    style L fill:#c8e6c9
+    style A fill:#F50DE0
+    style I fill:#9BB3F5
+    style L fill:#AF1BF4
 ```
 
 ### 3. API Request-Response Cycle
@@ -245,9 +245,9 @@ graph TD
     M --> N
     M --> O
     
-    style A fill:#e3f2fd
-    style M fill:#fff3e0
-    style P fill:#f1f8e9
+    style A fill:#AF1BF4
+    style M fill:#1B64F5
+    style P fill:#EB2A1C
 ```
 
 ## 📁 Project Structure
