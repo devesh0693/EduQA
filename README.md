@@ -335,26 +335,6 @@ educational-qa-system/
 - 🔄 **Real-time Feedback** - Interactive feedback system for answers
 - 📋 **Search History** - Track and revisit previous questions
 
-## 🏗️ Architecture
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   React Frontend│    │  Django Backend │    │   ML Models     │
-│                 │    │                 │    │                 │
-│ - Modern UI     │◄──►│ - REST API      │◄──►│ - BERT Models   │
-│ - State Mgmt    │    │ - Auth System   │    │ - Text Processing│
-│ - Real-time     │    │ - Document Proc │    │ - Answer Extract│
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │              ┌─────────────────┐              │
-         │              │   Data Layer    │              │
-         │              │                 │              │
-         └──────────────►│ - SQLite   │◄─────────────┘
-                        │ - Redis Cache  │
-                        │ - Elasticsearch│
-                        └─────────────────┘
-```
-
 ## 🛠️ Technology Stack
 
 ### Backend
@@ -483,7 +463,6 @@ Key configuration options:
 - `SECRET_KEY`: Django secret key
 - `DATABASE_URL`: Database connection string
 - `REDIS_URL`: Redis connection string
-- `ELASTICSEARCH_URL`: Elasticsearch connection string
 
 ### API Configuration
 
@@ -515,7 +494,6 @@ When deployed in production mode, the system includes:
 - Backend health: `GET /api/qa/health/`
 - Database connectivity
 - Redis connectivity
-- Elasticsearch status
 
 ## 🚀 Deployment
 
